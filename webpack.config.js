@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const uglify = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -9,5 +11,14 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  mode: 'production'
+  mode: 'production',
+  devServer: {
+    contentBase: './dist'
+  },
+  plugins: [
+    new uglify(),
+    new HtmlWebpackPlugin({
+      title: 'Output Management'
+    })
+  ],
 };
