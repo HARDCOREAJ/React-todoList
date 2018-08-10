@@ -15,5 +15,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://github.com/Project-TodoList/build"
+  "homepage": "https://hardcoreaj.github.io/Project-TodoList/build"
 }
