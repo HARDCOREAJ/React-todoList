@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import TodoInput from './TodoInput';
 import TodoItem from './TodoItem'
+import 'normalize.css'
+import './reset.css'
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +26,7 @@ class App extends Component {
     })
     return (
       <div className="App">
-        <h1>TO DO LIST</h1>
+        <h1>TODO LIST</h1>
         <div className="inputWrapper">
           <TodoInput content={this.state.newTodo} />
         </div>
