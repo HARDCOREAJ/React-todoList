@@ -7,7 +7,7 @@ import './reset.css'
 
 class App extends Component {
   constructor(props) {
-    super(prors)
+    super(props)
     this.state = {
       newTodo: 'test',
       todoList: [
