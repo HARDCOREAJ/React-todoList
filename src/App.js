@@ -39,8 +39,8 @@ class App extends Component {
     )
   }
 
-  toggle(e, todo) {
-    todo.status = todo.status === 'completed' ? 'completed' : ''
+  toggle(e,todo) {
+    todo.status = todo.status === 'completed' ? '' : 'completed'
     this.setState(this.state)
   }
 
