@@ -18,11 +18,11 @@ class App extends Component {
 
 
   render() {
-    let todos = this.state.todoList.map((item, index) => {
+    let todos = this.state.todoList.filter((item)=> !item.deleted).map((item, index) => {
       return (
         <li key={index}>
           <TodoItem todo={item} onToggle={this.toggle.bind(this)}
-            onDelete={this.deleted.bind(this)} /></li>
+            onDelete={this.delete.bind(this)} /></li>
       )
     })
     console.log(todos)
@@ -32,7 +32,7 @@ class App extends Component {
         <div className="inputWrapper">
           <TodoInput content={this.state.newTodo} onSubmit={this.addTodo.bind(this)} onChange={this.changeTitle.bind(this)} />
         </div>
-        <ol>
+        <ol className="todoList">
           {todos}
         </ol>
       </div>
@@ -44,7 +44,7 @@ class App extends Component {
     this.setState(this.state)
   }
 
-  changTitle(event) {
+  changeTitle(event) {
     this.setState({
       newTodo: event.target.value,
       todoList: this.state.todoList
