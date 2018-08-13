@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 
 export default class TodoInput extends Component {
     render(){
-        return <input type="text" value={this.props.content}/>
+        return <input type="text" Value={this.props.content}
+        onKeyPress={this.submit.bind(this)}
+        onchange={this.changeTitle.bind(this)}/>
+
     }
-}
+    submit(e){
+        if (e.key ==='Enter'){
+            this.props.onsumibt(e)
+        }
+    }
+
+    changeTitle(e){
+        this.props.onchange(e)
+    }
+    }
