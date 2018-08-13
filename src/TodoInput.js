@@ -4,7 +4,7 @@ export default class TodoInput extends Component {
     render(){
         return <input type="text" Value={this.props.content}
         onKeyPress={this.submit.bind(this)}
-        onchange={this.changeTitle.bind(this)}/>
+        onChange={this.changeTitle.bind(this)}/>
 
     }
     submit(e){
@@ -14,6 +14,6 @@ export default class TodoInput extends Component {
     }
 
     changeTitle(e){
-        this.props.onchange(e)
+        this.props.onChange(e)
     }
     }
