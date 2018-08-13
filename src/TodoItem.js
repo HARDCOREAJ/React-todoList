@@ -16,6 +16,6 @@ export default class TodoItem extends Component {
 
 
   delete(e) {
-    this.props.onDelete(e, this.pros.todo)
+    this.props.onDelete(e, this.props.todo)
   }
 }
